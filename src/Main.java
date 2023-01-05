@@ -1,20 +1,24 @@
-import java.util.*;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
-	}
-}
+		Customer c =  new RegularCustomer ("Simon", 100);
+		RegularCustomer rc = new RegularCustomer("Victor", 200);
+		SeniorCustomer sc = new SeniorCustomer("Luis", 300);
+		
+		
+		
+		// initialize the Customer object to RegularCustomer object
+		
+		c = rc;
+		System.out.println( " Bill for regular customer: " + c.calculateBill());
+		
+		
+		// initialize Customer to SeniorCustomer
+		
+		c =sc;
+		System.out.println( "Bill for senior customer: " + c. calculateBill());
+		   
+		}
+   }
